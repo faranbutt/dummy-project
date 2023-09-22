@@ -1,3 +1,8 @@
 console.log("INFORMATION!!")
-console.log(process.env.NAME);
+if(process.env.NAME=='taimoor'){
+    console.log("SUCCESS")
+}
+else{
+    console.log("FAILED")
+}
 console.log(process.env.RELATION);

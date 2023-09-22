@@ -1,11 +1,3 @@
-import express from 'express';
-
-const app = express();
-
-console.log("Faran")
+console.log("INFORMATION!!")
 console.log(process.env.NAME);
-
-
-app.listen(4000,()=>{
-    console.log("Server is running on port 3000")
-})
+console.log(process.env.RELATION);

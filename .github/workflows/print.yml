@@ -29,3 +29,9 @@ jobs:
               run: echo "MY school is $SCHOOL"
             - name: Print Name from info
               run: echo "${{env.NAME}}"
+    build:
+      runs-on: ubuntu-latest
+      environment: build
+      env:
+        NAME: ${{secrets.NAME}}
+        RELATION: ${{secrets.RELATION}}

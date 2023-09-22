@@ -19,7 +19,7 @@ jobs:
             - name: Install Dependencies
               run: bun install
             - name:  Run Code
-              run: bun index.js
+              run: bun app.js
               timeout-minutes: 1
                 
     deploy:
@@ -35,3 +35,14 @@ jobs:
       env:
         NAME: ${{secrets.NAME}}
         RELATION: ${{secrets.RELATION}}
+      steps:
+        - name: Get Code
+          uses: actions/checkout@v4
+        - name: Get Bun
+          uses: oven-sh/setup-bun@v1
+        - name: Install Dependencies
+          run: bun install
+        - name:  Run Code
+          run: bun index.js
+          
+          

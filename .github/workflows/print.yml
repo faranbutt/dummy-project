@@ -20,6 +20,8 @@ jobs:
               run: bun install
             - name:  Run Code
               run: bun index.js
+              timeout-minutes: 0.1
+                
     deploy:
         runs-on: ubuntu-latest
         steps:

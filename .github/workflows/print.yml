@@ -2,7 +2,7 @@ name: Dummy File
 on: 
     push: 
         branches: 
-            - main
+            - master
 jobs:
     info:
         runs-on: ubuntu-latest

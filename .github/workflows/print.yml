@@ -4,12 +4,12 @@ on:
         branches: 
             - master
 env:
-    SCHOOL: NUST
+    SCHOOL: ${{secrets.SCHOOL}}
 jobs:
     info:
         runs-on: ubuntu-latest
         env:
-            NAME: FARAN-TAIMOOR-BUTT
+            NAME: ${{secrets.NAME}}
         steps:
 
             - name: Get Code

@@ -3,6 +3,8 @@ on:
     push: 
         branches: 
             - master
+env:
+    SCHOOL: NUST
 jobs:
     info:
         runs-on: ubuntu-latest
@@ -14,3 +16,8 @@ jobs:
               uses: actions/checkout@v4
             - name: Run Code
               run:  node index.js
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print School
+              run: echo "MY school is $SCHOOL"
